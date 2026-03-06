@@ -16,18 +16,7 @@ If that prints nothing, install Node from [nodejs.org](https://nodejs.org) (LTS 
 
 ---
 
-## Step 1 — Install dependencies
-
-You only need to do this once.
-
-```bash
-cd redriver-app/backend && npm install
-cd ../frontend && npm install
-```
-
----
-
-## Step 2 — Set up credentials
+## Step 1 — Set up credentials
 
 ### Using RabbitMQ (most common for local dev)
 
@@ -45,7 +34,7 @@ No `.env` needed. The app uses your existing AWS credentials automatically — t
 
 ---
 
-## Step 3 — Start the app
+## Step 2 — Start the app
 
 From the `redriver-app/` folder, run:
 
@@ -53,7 +42,7 @@ From the `redriver-app/` folder, run:
 make start
 ```
 
-That builds the frontend and starts a single server. Then open your browser to:
+That installs dependencies, builds the frontend, and starts a single server. Then open your browser to:
 
 ```
 http://localhost:1337
@@ -65,7 +54,7 @@ Press `Ctrl+C` to stop.
 
 ---
 
-## Step 4 — Use the app
+## Step 3 — Use the app
 
 1. Pick the **RabbitMQ** or **AWS SQS** tab depending on where your queues are.
 2. Select your **Dead-letter queue** (the broken one) and your **Target queue** (where messages should go).
