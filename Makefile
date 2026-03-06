@@ -12,9 +12,10 @@ install:
 
 # Dev mode: hot-reload frontend (Vite on :1337) + backend (on :3001) — Ctrl+C stops both
 dev: install
+	trap 'kill 0' SIGINT SIGTERM; \
 	(cd backend && PORT=3001 npm run dev) & \
-	(cd frontend && npm run dev); \
-	kill $$! 2>/dev/null || true
+	(cd frontend && npm run dev) & \
+	wait
 
 # Start only the backend in dev mode
 dev-backend:
