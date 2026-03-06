@@ -1,0 +1,18 @@
+# Dependencies
+node_modules/
+backend/node_modules/
+frontend/node_modules/
+
+# Build output
+frontend/dist/
+
+# Environment — never commit secrets
+backend/.env
+
+# Compiled TS config artifacts
+frontend/vite.config.js
+frontend/tsconfig.node.tsbuildinfo
+
+# Misc
+.DS_Store
+*.log
